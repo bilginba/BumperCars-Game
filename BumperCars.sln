@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A7925C8F-09B9-0B0B-B187-7668C87D8ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponents", "NavMeshComponents.csproj", "{4D099E5B-FCED-AC02-83ED-C8CC0E24343C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponentsEditor", "NavMeshComponentsEditor.csproj", "{BC3456B8-93FA-7710-73E0-3F449658E267}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{064CAB35-4889-4D11-B293-FD1B4F831A71}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7925C8F-09B9-0B0B-B187-7668C87D8ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7925C8F-09B9-0B0B-B187-7668C87D8ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7925C8F-09B9-0B0B-B187-7668C87D8ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7925C8F-09B9-0B0B-B187-7668C87D8ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D099E5B-FCED-AC02-83ED-C8CC0E24343C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D099E5B-FCED-AC02-83ED-C8CC0E24343C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D099E5B-FCED-AC02-83ED-C8CC0E24343C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D099E5B-FCED-AC02-83ED-C8CC0E24343C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3456B8-93FA-7710-73E0-3F449658E267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3456B8-93FA-7710-73E0-3F449658E267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3456B8-93FA-7710-73E0-3F449658E267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3456B8-93FA-7710-73E0-3F449658E267}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -64,15 +64,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AccelerateButton.cs" />
-    <Compile Include="Assets\Scripts\BreakButton.cs" />
-    <Compile Include="Assets\Scripts\BumperCarBounce.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\CameraSwipe.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\TurnLeftButton.cs" />
-    <Compile Include="Assets\Scripts\TurnRightButton.cs" />
+    <Compile Include="Assets\Scripts\GameComponents\BumperCarBounce.cs" />
+    <Compile Include="Assets\Scripts\GameComponents\DestroyCars.cs" />
+    <Compile Include="Assets\Scripts\GameComponents\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\GameComponents\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game_Buttons\AccelerateButton.cs" />
+    <Compile Include="Assets\Scripts\Game_Buttons\BrakeButton.cs" />
+    <Compile Include="Assets\Scripts\Game_Buttons\TurnLeftButton.cs" />
+    <Compile Include="Assets\Scripts\Game_Buttons\TurnRightButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>E:/Unity/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -629,16 +651,7 @@
       <HintPath>E:/Unity/UnityProjects/Personal/BumperCars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{BC3456B8-93FA-7710-73E0-3F449658E267}</Project>
-      <Name>NavMeshComponentsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{4D099E5B-FCED-AC02-83ED-C8CC0E24343C}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

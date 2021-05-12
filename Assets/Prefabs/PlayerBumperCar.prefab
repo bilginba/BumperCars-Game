@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2881890670374477942}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.104, z: -0.5640001}
+  m_LocalRotation: {x: 0.03884636, y: -0, z: -0, w: 0.9992452}
+  m_LocalPosition: {x: 0, y: 1.104, z: -0.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2338548217198090260}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.453, y: 0, z: 0}
 --- !u!20 &2881890670374477940
 Camera:
   m_ObjectHideFlags: 0
@@ -131,8 +131,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3049839956169914860}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -189,8 +189,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3116457519686828718}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: -14.23}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36, z: -14.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2174024252843750853}
@@ -212,10 +212,10 @@ BoxCollider:
   m_GameObject: {fileID: 3116457519686828718}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4119909, y: 0.78485274, z: 1.6629543}
-  m_Center: {x: 0, y: 0.35869086, z: 0.038793564}
+  m_Size: {x: 1.6347007, y: 0.96941257, z: 1.9825287}
+  m_Center: {x: 0.017224848, y: 0.46191084, z: -0.019168854}
 --- !u!54 &4875589697045257623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -224,14 +224,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3116457519686828718}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 4
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &9207181467831463179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,10 +244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3da693542095a4e9b629ec707f4391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carFwdSpeed: 40
+  carFwdSpeed: 30
   carRevSpeed: 20
   carTurnSpeed: 60
   steeringWheel: {fileID: 6697176241672143350}
+  steeringWheelMaxTurnAngle: 45
+  carDestroyPoint: -2
 --- !u!114 &6873781851763068397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9afc99624e8d46d488f1615652009963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceValue: 500
+  bounceValue: 150
 --- !u!1 &3400045582742526871
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,8 +311,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3400045582742526871}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -391,8 +393,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073298512220519766}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -470,8 +472,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6253832725022851775}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -550,8 +552,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7027094360238013886}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -629,8 +631,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7381666464856919211}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

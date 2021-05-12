@@ -91,11 +91,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3438908562108125412}
-  - component: {fileID: 4092398469202185811}
+  - component: {fileID: 7950311094933544854}
+  - component: {fileID: 4989955042690031787}
   - component: {fileID: 5504760850597664103}
-  - component: {fileID: 7231533965604898659}
-  - component: {fileID: 8667146606762944298}
   - component: {fileID: 2772513945924479570}
+  - component: {fileID: 2608859893233468747}
   m_Layer: 9
   m_Name: EnemyBumperCar
   m_TagString: BumperCar
@@ -110,8 +110,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2662372510987799134}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: -14.23}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36, z: -14.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1289977421090782517}
@@ -123,7 +123,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4092398469202185811
+--- !u!65 &7950311094933544854
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,8 +134,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4119909, y: 0.20936185, z: 2.062996}
-  m_Center: {x: 0, y: 0.29569948, z: -0.06472874}
+  m_Size: {x: 1.6319695, y: 0.96941257, z: 2.0019484}
+  m_Center: {x: 0.001091361, y: 0.46191084, z: -0.014111042}
+--- !u!135 &4989955042690031787
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2662372510987799134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7.14
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5504760850597664103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,49 +157,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2662372510987799134}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 4
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!114 &7231533965604898659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2662372510987799134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afc99624e8d46d488f1615652009963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceValue: 50
---- !u!195 &8667146606762944298
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2662372510987799134}
-  m_Enabled: 1
-  m_AgentTypeID: -334000983
-  m_Radius: 0.5
-  m_Speed: 30
-  m_Acceleration: 20
-  avoidancePriority: 50
-  m_AngularSpeed: 60
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_Constraints: 80
+  m_CollisionDetection: 2
 --- !u!114 &2772513945924479570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,18 +177,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5ee22f6ec760c4e9c017315ace8f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 40
-  agent: {fileID: 8667146606762944298}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  whatIsBumperCar:
-    serializedVersion: 2
-    m_Bits: 512
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
-  sightRange: 1
-  bumperCarInSightRange: 0
+  carSpeed: 5
+  carDistanceToGround: 1
+  wanderTime: 0
+  carDestroyPoint: -2
+  boxCollider: {fileID: 7950311094933544854}
+  nearestCar: {fileID: 0}
+--- !u!114 &2608859893233468747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2662372510987799134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afc99624e8d46d488f1615652009963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceValue: 150
 --- !u!1 &2710728697131495708
 GameObject:
   m_ObjectHideFlags: 0
